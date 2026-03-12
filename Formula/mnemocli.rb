@@ -5,21 +5,21 @@
 class Mnemocli < Formula
   desc "MnemoShare CLI - HIPAA-compliant secure file transfer"
   homepage "https://github.com/mnemoshare/mnemoshare"
-  version "0.9.3"
+  version "0.9.4"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mnemoshare/mnemoshare/releases/download/v0.9.3/mnemocli_0.9.3_darwin_amd64.tar.gz"
-      sha256 "28ac3d7a55e57083e5824aa06f8aaf1d16c793ba144f26f382815fb88a58c69b"
+      url "https://github.com/mnemoshare/mnemoshare/releases/download/v0.9.4/mnemocli_0.9.4_darwin_amd64.tar.gz"
+      sha256 "70d5f70e5991a787ca10e06b734903a26db751bfe37902d3424ee20d3c6a1f8c"
 
       define_method(:install) do
         bin.install "mnemocli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mnemoshare/mnemoshare/releases/download/v0.9.3/mnemocli_0.9.3_darwin_arm64.tar.gz"
-      sha256 "f3ad588f15e9866d9d0b9de7cf5feaec7c4c6836f711747d456b3ee4e7a5496c"
+      url "https://github.com/mnemoshare/mnemoshare/releases/download/v0.9.4/mnemocli_0.9.4_darwin_arm64.tar.gz"
+      sha256 "008a17c9da9e3866d4eab4e88775ad62f41233563835ba72a1fe6a4717da6563"
 
       define_method(:install) do
         bin.install "mnemocli"
@@ -29,15 +29,15 @@ class Mnemocli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mnemoshare/mnemoshare/releases/download/v0.9.3/mnemocli_0.9.3_linux_amd64.tar.gz"
-      sha256 "3e5d3db9fdb1a4a857761c46953160e5b5e0bd82a47a432fb796524ccc84d720"
+      url "https://github.com/mnemoshare/mnemoshare/releases/download/v0.9.4/mnemocli_0.9.4_linux_amd64.tar.gz"
+      sha256 "e757d63f524e69fd7cabc9ed79b97b758ce3d00e0452a4f6023ff95f27d017ec"
       define_method(:install) do
         bin.install "mnemocli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mnemoshare/mnemoshare/releases/download/v0.9.3/mnemocli_0.9.3_linux_arm64.tar.gz"
-      sha256 "8de1c7b884564b4915c74f6b194369663c0f6795a6f25af6fea8ec2ff9a65c4b"
+      url "https://github.com/mnemoshare/mnemoshare/releases/download/v0.9.4/mnemocli_0.9.4_linux_arm64.tar.gz"
+      sha256 "0b2e065cd2752ac75e33357d28d4f3a8d15d3027c923c27bc2f14fc99aa3ab64"
       define_method(:install) do
         bin.install "mnemocli"
       end
