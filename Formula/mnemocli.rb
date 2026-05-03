@@ -11,7 +11,7 @@ class Mnemocli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/mnemoshare/mnemoshare/releases/download/v0.14.8/mnemocli_0.14.8_darwin_amd64.tar.gz"
-      sha256 "65a41dc6931ae6387820297040c7e3883941e7e9d8767704a9dbbf365640506f"
+      sha256 "56c1d06ebd80f238d35e61e457cf1539c7990aa7d52268a48ca6e9274b882d63"
 
       define_method(:install) do
         bin.install "mnemocli"
@@ -19,7 +19,7 @@ class Mnemocli < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/mnemoshare/mnemoshare/releases/download/v0.14.8/mnemocli_0.14.8_darwin_arm64.tar.gz"
-      sha256 "a1a75e370fc0aa4163c12439d91db1ce90105cb4d6a97cff4786391bc09ac81c"
+      sha256 "741d971a4b13707d6e6ce654692ed09901c04429368ddfed6ca38337438b0cd7"
 
       define_method(:install) do
         bin.install "mnemocli"
