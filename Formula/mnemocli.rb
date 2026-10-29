@@ -5,21 +5,21 @@
 class Mnemocli < Formula
   desc "MnemoShare CLI - HIPAA-compliant secure file transfer"
   homepage "https://github.com/mnemoshare/mnemoshare"
-  version "0.21.0"
+  version "0.22.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MnemoShare/releases/releases/download/v0.21.0/mnemocli_0.21.0_darwin_amd64.tar.gz"
-      sha256 "bb759febe1af73019408cfbaa883d0ae9f93583cc984535c6ba31561cb29ff25"
+      url "https://github.com/MnemoShare/releases/releases/download/v0.22.0/mnemocli_0.22.0_darwin_amd64.tar.gz"
+      sha256 "02fd50bfdb5d8e4a6bbe8ff29202a215f38cddca1af81e6decdd2c8b6af10c4e"
 
       define_method(:install) do
         bin.install "mnemocli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MnemoShare/releases/releases/download/v0.21.0/mnemocli_0.21.0_darwin_arm64.tar.gz"
-      sha256 "4ac08fb99aa1565b26215bc8b371187d60a6341677b50a11e57e08142bf7a732"
+      url "https://github.com/MnemoShare/releases/releases/download/v0.22.0/mnemocli_0.22.0_darwin_arm64.tar.gz"
+      sha256 "a07b66fbb2c7935a0100a672af4fc36e7d51fff8d55aab396ec0a8c592466268"
 
       define_method(:install) do
         bin.install "mnemocli"
@@ -29,19 +29,27 @@ class Mnemocli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MnemoShare/releases/releases/download/v0.21.0/mnemocli_0.21.0_linux_amd64.tar.gz"
-      sha256 "4c3bfab02f6608a15348730d3b61800cbe39e0211ae518908f4e4f5d6dbd28c4"
+      url "https://github.com/MnemoShare/releases/releases/download/v0.22.0/mnemocli_0.22.0_linux_amd64.tar.gz"
+      sha256 "65a4dbc4b3b07afb474ba1f1ec75de1f4a0797c36cb0d136f2262fad81d9cd41"
       define_method(:install) do
         bin.install "mnemocli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MnemoShare/releases/releases/download/v0.21.0/mnemocli_0.21.0_linux_arm64.tar.gz"
-      sha256 "32d714f194c5cde5729605d8c987fa14a436a7faebbe39d0f60e3d2560e20cb4"
+      url "https://github.com/MnemoShare/releases/releases/download/v0.22.0/mnemocli_0.22.0_linux_arm64.tar.gz"
+      sha256 "cfe590f1201d16765452f608bb50028634b214eccb3d2f7eaacd64baac9a970c"
       define_method(:install) do
         bin.install "mnemocli"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      On macOS this formula installs a bare binary without Secure Enclave support.
+      For Secure Enclave hardware keys install the signed app instead:
+        brew install --cask mnemoshare/tap/mnemocli
+    EOS
   end
 
   test do
