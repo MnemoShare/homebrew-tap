@@ -1,12 +1,12 @@
 cask "mnemocli" do
-  version "0.23.1"
+  version "0.23.2"
 
   on_arm do
-    sha256 "7d7e8971a67643a953b35d74164726adac408dddb3c68bef55c20f0cec345482"
+    sha256 "d4b000db11e5e33c0d9a7e9a3aa912f2e6ac507869d1194cc425f02a6d00b730"
     url "https://github.com/MnemoShare/releases/releases/download/v#{version}/MnemoCLI_#{version}_darwin_arm64.zip"
   end
   on_intel do
-    sha256 "039586d94f605c5b98d3a978b221a50e8e50af1c94e986a738a2e452d63cd14f"
+    sha256 "dd14d5715281346722a8f29a968a89f27ae26ac3e47b4681e0f8873b70841628"
     url "https://github.com/MnemoShare/releases/releases/download/v#{version}/MnemoCLI_#{version}_darwin_amd64.zip"
   end
 
